@@ -10,7 +10,7 @@ namespace Foodie
         public App()
         {
             InitializeComponent();
-            this.MainPage = new NavigationPage(new EditRecipePage());
+            this.MainPage = new NavigationPage(new RecipePageList());
 
         }
 

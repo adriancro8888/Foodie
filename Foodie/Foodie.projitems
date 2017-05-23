@@ -17,16 +17,47 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\NumericEntryBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Triggers\RequiredValidationTriggerAction.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Recipe.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RecipeData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RecipePageList.xaml.cs">
+      <DependentUpon>RecipePageList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RecipeGrouping.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ListViewGrouping.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Value Converters\RecipeToImageValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Value Converters\BoolToValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Value Converters\BooleanToValueConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\EditRecipePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\RecipePageList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\burger.jpg">
+      <LogicalName>Foodie.Images.burger.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\blueberry-muffins.jpg">
+      <LogicalName>Foodie.Images.blueberry-muffins.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\eggs-benedict.jpg">
+      <LogicalName>Foodie.Images.eggs-benedict.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\ham.jpg">
+      <LogicalName>Foodie.Images.ham.jpg</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\potato-salad.jpg">
+      <LogicalName>Foodie.Images.potato-salad.jpg</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
     <Folder Include="$(MSBuildThisFileDirectory)Behaviors\" />
     <Folder Include="$(MSBuildThisFileDirectory)Triggers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Value Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Images\" />
   </ItemGroup>
 </Project>
