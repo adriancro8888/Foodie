@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace Foodie
+namespace Foodie.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class EditRecipePage : ContentPage
     {
-        public AboutPage()
+        public EditRecipePage()
         {
             InitializeComponent();
         }
