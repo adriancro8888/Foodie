@@ -7,7 +7,17 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <ListView ItemsSource="{x:Static local:RecipeData.AllRecipesGrouped}" GroupDisplayBinding="{Binding Title}" IsGroupingEnabled="true" SeparatorVisibility="None" HasUnevenRows="true" ItemTemplate="{StaticResource recipeTemplateSel}">
+        <ListView x:Name="recipeList"
+            ItemsSource="{x:Static local:RecipeData.AllRecipesGrouped}" 
+            GroupDisplayBinding="{Binding Title}"
+            IsGroupingEnabled="true"
+            SeparatorVisibility="None" 
+            HasUnevenRows="true" 
+            ItemTemplate="{StaticResource recipeTemplateSel}"
+            ItemSelected="Handle_ItemSelected">
         </ListView>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="change" Clicked="ChangeStyles_Click"/>
+    </ContentPage.ToolbarItems>
 </ContentPage>

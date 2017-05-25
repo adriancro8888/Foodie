@@ -7,9 +7,10 @@ namespace Foodie
 {
     public partial class RecipeDetailPage : ContentPage
     {
-        public RecipeDetailPage()
+        public RecipeDetailPage(Recipe selectedRecipe)
         {
             InitializeComponent();
+            BindingContext = selectedRecipe;
         }
     }
 }

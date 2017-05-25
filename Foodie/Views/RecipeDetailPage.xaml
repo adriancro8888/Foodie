@@ -3,20 +3,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Foodie; assembly=Foodie" 
     x:Class="Foodie.RecipeDetailPage"
-    Title="Details"
-    BindingContext="{x:Static local:RecipeData.SingleRecipe}"
-    >
+    Title="Details">
     <ContentView.Resources>
         <ResourceDictionary>
             
             <local:RecipeToImageValueConverter x:Key="imageConverter" Assembly="Foodie.Images" />
 
-            <Style x:Key="centerAlignStyle" TargetType="Label">
+            <Style x:Key="CenterAlignStyle" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
             </Style>
             
-            <Style x:Key="prepInfoStyle" TargetType="Label" BasedOn="{StaticResource centerAlignStyle}">
+            <Style x:Key="prepInfoStyle" TargetType="Label" BasedOn="{StaticResource CenterAlignStyle}">
                 <Setter Property="TextColor" Value="#FFFFFF"/>
             </Style>
 
@@ -75,11 +73,11 @@
                         Grid.Row="3" Grid.Column="2" />
 
                     <Label Text="{Binding MealType}"  TextColor="#4CAF50" FontSize="Large"
-                        Style="{StaticResource centerAlignStyle}"
+                        Style="{StaticResource CenterAlignStyle}"
                         Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3"  />
 
                     <Label Text="{Binding Difficulty, StringFormat='** {0} difficulty **'}" TextColor="#3F51B5"
-                        Style="{StaticResource centerAlignStyle}"
+                        Style="{StaticResource CenterAlignStyle}"
                         Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" />
 
                     <Label Text="Ingredients" Style="{StaticResource microLabelStyle}"

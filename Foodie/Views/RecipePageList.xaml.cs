@@ -11,5 +11,20 @@ namespace Foodie
         {
             InitializeComponent();
         }
+
+        async void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            var recipe = e.SelectedItem as Recipe;
+            if (recipe == null)
+                return;
+
+            var detailPage = new RecipeDetailPage(recipe);
+            await Navigation.PushAsync(detailPage);
+        }
+        void ChangeStyles_Click(object sender, System.EventArgs e)
+        {
+            // Broadcast a message that the cell should update colors
+            MessagingCenter.Send(this, "change");
+        }
     }
 }

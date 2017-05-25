@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:Foodie; assembly=Foodie"
     x:Class="Foodie.RecipeCell"
     Height="200">
-    <ContentView Style="{StaticResource overallCellContentStyle}">
+    <ContentView Style="{StaticResource OverallCellContentStyle}">
         <ContentView.Resources>
             <ResourceDictionary>
                 <local:BoolToValueConverter x:Key="colorConvert" x:TypeArguments="Color" 
@@ -44,13 +44,13 @@
             <BoxView Color="#F6F6F6" 
                 Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" />
             <Label Text="{Binding PreparationTime, StringFormat='{0} prep'}" 
-               Style="{StaticResource cellPrepDetailsStyle}" Margin="10,5,0,0"
+               Style="{StaticResource CellPrepDetailsStyle}" Margin="10,5,0,0"
                 Grid.Row="3" Grid.Column="0" />
             <Label Text="{Binding CookTime, StringFormat='{0} cook'}" 
-                 Style="{StaticResource cellPrepDetailsStyle}"  
+                 Style="{StaticResource CellPrepDetailsStyle}"  
                 Grid.Row="3" Grid.Column="1" />
             <Label Text="{Binding NumberOfServings, StringFormat='serves {0}'}" 
-                 Style="{StaticResource cellPrepDetailsStyle}"  
+                 Style="{StaticResource CellPrepDetailsStyle}"  
                 Grid.Row="3" Grid.Column="2" />
             <Label Text="View Recipe &gt;" Font="Micro" HorizontalTextAlignment="End" 
                 Margin="0,5,10,0" TextColor="#4CAF50" FontAttributes="Bold" 
