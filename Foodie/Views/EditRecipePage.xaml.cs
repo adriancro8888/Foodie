@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace Foodie.Views
+namespace Foodie
 {
     public partial class EditRecipePage : ContentPage
     {

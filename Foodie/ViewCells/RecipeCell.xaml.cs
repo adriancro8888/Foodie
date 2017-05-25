@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace Foodie
 {
-    public partial class RecipePageList : ContentPage
+    public partial class RecipeCell : ViewCell
     {
-        public RecipePageList()
+        public RecipeCell()
         {
             InitializeComponent();
         }

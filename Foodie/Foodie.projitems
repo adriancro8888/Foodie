@@ -18,7 +18,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\NumericEntryBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Triggers\RequiredValidationTriggerAction.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Recipe.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\RecipeData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\RecipePageList.xaml.cs">
       <DependentUpon>RecipePageList.xaml</DependentUpon>
     </Compile>
@@ -27,6 +26,17 @@
     <Compile Include="$(MSBuildThisFileDirectory)Value Converters\RecipeToImageValueConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Value Converters\BoolToValueConverter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Value Converters\BooleanToValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewCells\RecipeCell.xaml.cs">
+      <DependentUpon>RecipeCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewCells\RecommendedRecipeCell.xaml.cs">
+      <DependentUpon>RecommendedRecipeCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DataTemplateSelector\RecipeDataTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RecipeData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\RecipeDetailPage.xaml.cs">
+      <DependentUpon>RecipeDetailPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
@@ -51,6 +61,15 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Images\potato-salad.jpg">
       <LogicalName>Foodie.Images.potato-salad.jpg</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewCells\RecipeCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ViewCells\RecommendedRecipeCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\RecipeDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
@@ -59,5 +78,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Value Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)Images\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewCells\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DataTemplateSelector\" />
   </ItemGroup>
 </Project>

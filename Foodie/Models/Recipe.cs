@@ -53,6 +53,7 @@ namespace Foodie
             get;
             set;
         }
+        public bool IsRecommended { get; set; }
     }
 
     public static class Difficulty
