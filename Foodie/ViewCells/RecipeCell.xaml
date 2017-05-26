@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Foodie; assembly=Foodie"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     x:Class="Foodie.RecipeCell"
     Height="200">
     <ContentView Style="{StaticResource OverallCellContentStyle}">
@@ -33,7 +34,7 @@
                 Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" />         
             <Image Aspect="AspectFill"
                 Source="{Binding ImageName, Converter={StaticResource imageConvert}}"
-                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
+                Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3"   />
             <BoxView Color="#757575" Opacity=".25" 
                 Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" />
             <Label Text="{Binding RecipeName}" TextColor="White" 
