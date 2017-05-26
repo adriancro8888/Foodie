@@ -7,9 +7,14 @@ namespace Foodie
 {
     public partial class EditRecipePage : ContentPage
     {
-        public EditRecipePage()
+        public EditRecipePage(Recipe recipe)
         {
             InitializeComponent();
+            BindingContext = recipe;
+        }
+        async void HandleCancel_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PopModalAsync();
         }
     }
 }

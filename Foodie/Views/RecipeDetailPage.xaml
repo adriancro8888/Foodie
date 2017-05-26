@@ -94,4 +94,7 @@
             <Button Text="Make Again!" />
         </StackLayout>
     </ContentPage.Content>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Edit" Clicked="EditRecipe_Clicked" />
+    </ContentPage.ToolbarItems>
 </ContentPage>

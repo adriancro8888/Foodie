@@ -16,7 +16,7 @@
 										</DataTrigger>
 									</Label.Triggers>
 								</Label>
-								<Entry x:Name="recipeNameEntry" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" Text="Scrambled Eggs">
+								<Entry x:Name="recipeNameEntry" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" Text="{Binding RecipeName}">
 									<Entry.Triggers>
 										<EventTrigger Event="TextChanged">
 											<local:RequiredValidationTriggerAction />
@@ -37,7 +37,7 @@
 										</DataTrigger>
 									</Label.Triggers>
 								</Label>
-								<Entry x:Name="prepTimeEntry" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" Text="5 mins" >
+								<Entry x:Name="prepTimeEntry" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" Text="{Binding PreparationTime}" >
                                     <Entry.Triggers>
                                         <EventTrigger Event="TextChanged">
                                             <local:RequiredValidationTriggerAction />
@@ -58,7 +58,7 @@
 										</DataTrigger>
 									</Label.Triggers>
 								</Label>
-								<Entry x:Name="cookTimeEntry" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" Text="2 min">
+								<Entry x:Name="cookTimeEntry" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End" Text="{Binding CookTime}">
                                     <Entry.Triggers>
                                         <EventTrigger Event="TextChanged">
                                             <local:RequiredValidationTriggerAction />
@@ -79,7 +79,7 @@
                                         </DataTrigger>
                                     </Label.Triggers>
                                 </Label>
-								<Entry x:Name="nosEntry" Text="2" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End">
+								<Entry x:Name="nosEntry" Text="{Binding NumberOfServings}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="End">
 									<Entry.Behaviors>
 										<local:NumericEntryBehavior />
 									</Entry.Behaviors>
@@ -92,7 +92,14 @@
 							</StackLayout>
 						</ContentView>
 					</ViewCell>
-					<SwitchCell Text="Make again?" On="true" />
+                    <ViewCell>
+                        <ContentView>
+                            <StackLayout Orientation="Horizontal" Margin="15,10,10,10">
+                                <Label Text="Make Again?" VerticalOptions="Center" />
+                                <Switch IsToggled="{Binding WillMakeAgain}" HorizontalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
 				</TableSection>
                 <!--Meal Section-->
                 <TableSection Title="Meal">
@@ -116,7 +123,7 @@
                 <TableSection Title="Ingredients">
 					<ViewCell>
 						<ContentView HeightRequest="125" Margin="15,10,10,10">
-							<Editor Text="8 eggs, 1/2 cup milk">
+							<Editor Text="{Binding Ingredients}">
 								<Editor.Triggers>
 									<Trigger TargetType="Editor" Property="IsFocused" Value="True">
 										<Setter Property="BackgroundColor" Value="#FFF9C4" />
@@ -133,7 +140,7 @@
                 <TableSection Title="Directions">
 					<ViewCell>
 						<ContentView HeightRequest="200" Margin="15,10,10,10">
-							<Editor Text="Break egss, mix in milk, pour mixture into skillet, put heat on, constant vigilance while cooking">
+							<Editor Text="{Binding Directions}">
 								<Editor.Triggers>
 									<Trigger TargetType="Editor" Property="IsFocused" Value="True">
 										<Setter Property="BackgroundColor" Value="#FFF9C4" />
@@ -149,4 +156,7 @@
 			</TableView.Root>
 		</TableView>
 	</ContentPage.Content>
+    <ContentPage.ToolbarItems>      
+        <ToolbarItem Text="Cancel" Clicked="HandleCancel_Clicked" />
+    </ContentPage.ToolbarItems>
 </ContentPage>
